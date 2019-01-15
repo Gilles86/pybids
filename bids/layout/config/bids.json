@@ -26,10 +26,6 @@
             "pattern": "[_/\\\\]inv-([a-zA-Z0-9]+)"
         },
         {
-            "name": "part",
-            "pattern": "[_/\\\\]part-(mag|phase)"
-        },
-        {
             "name": "ce",
             "pattern": "[_/\\\\]ce-([a-zA-Z0-9]+)"
         },
@@ -63,6 +59,10 @@
             "pattern": "[_/\\\\]recording-([a-zA-Z0-9]+)"
         },
         {
+            "name": "part",
+            "pattern": "[_/\\\\]part-(mag|phase)"
+        },
+        {
             "name": "suffix",
             "pattern": "[._]*([a-zA-Z0-9]*?)\\.[^/\\\\]+$"
         },
@@ -81,7 +81,7 @@
     ],
 
     "default_path_patterns": [
-        "sub-{subject}[/ses-{session}]/anat/sub-{subject}[_ses-{session}][_acq-{acquisition}][_inv-{inversion}][_echo-{echo}][_ce-{contrast}][_rec-{reconstruction}][_part-{part}]_{suffix<T1w|T2w|T1rho|T1map|T2map|T2star|FLAIR|FLASH|MPRAGE|PDmap|PD|PDT2|inplaneT[12]|angio>}.nii.gz",
+        "sub-{subject}[/ses-{session}]/anat/sub-{subject}[_ses-{session}][_acq-{acquisition}][_inv-{inversion}][_echo-{echo}][_ce-{contrast}][_rec-{reconstruction}][_part-{part}]_{suffix<T1w|T2w|T1rho|T1map|T2map|T2star|FLAIR|FLASH|MPRAGE|PDmap|PD|PDT2|inplaneT[12]|angio>}{extension<json|nii.gz|nii>}",
         "sub-{subject}[/ses-{session}]/anat/sub-{subject}[_ses-{session}][_acq-{acquisition}][_ce-{contrast}][_rec-{reconstruction}][_mod-{modality}]_{suffix<defacemask>}.nii.gz",
         "sub-{subject}[/ses-{session}]/func/sub-{subject}[_ses-{session}]_task-{task}[_acq-{acquisition}][_rec-{reconstruction}][_run-{run}][_echo-{echo}]_{suffix<bold>}.nii.gz",
         "sub-{subject}[/ses-{session}]/dwi/sub-{subject}[_ses-{session}][_acq-{acquisition}]_{suffix<dwi>}{extension<bval|bvec|json|nii\\.gz|nii>|nii\\.gz}",
